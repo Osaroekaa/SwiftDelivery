@@ -10,7 +10,7 @@ import TrackingPage from "./pages/TrackingPage";
 import HistoryPage from "./pages/HistoryPage";
 import ProfilePage from "./pages/ProfilePage";
 import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignUpPage";
+import SignpuPage from "./pages/SignUpPage";
 import ForgotPassword from "./pages/ForgotPassword";
 import SplashPage from "./pages/SplashPage";
 import OnboardingPage from "./pages/OnboardingPage";
