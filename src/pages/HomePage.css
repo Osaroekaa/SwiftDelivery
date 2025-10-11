@@ -1,0 +1,360 @@
+ .home-container {
+          padding: 20px;
+          min-height: 100vh;
+          background: #f8f9fa;
+          padding-bottom: 120px;
+        }
+
+        .location-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: white;
+          padding: 16px 20px;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          margin-bottom: 24px;
+          border: 1px solid #e0e0e0;
+        }
+
+        .location-icon {
+          color: #28a745;
+          font-size: 18px;
+          margin-right: 12px;
+        }
+
+        .location-info {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        }
+
+        .location-label {
+          font-size: 12px;
+          color: #6c757d;
+          margin-bottom: 2px;
+        }
+
+        .location-text {
+          font-size: 14px;
+          font-weight: 600;
+          color: #333;
+        }
+
+        .balance-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+
+        .balance-label {
+          font-size: 12px;
+          color: #6c757d;
+          margin-bottom: 2px;
+        }
+
+        .balance-amount {
+          font-size: 16px;
+          font-weight: bold;
+          color: #28a745;
+        }
+
+        .page-title {
+          margin: 0 0 24px 0;
+          color: #333;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .delivery-type {
+          display: flex;
+          gap: 8px;
+          margin-bottom: 28px;
+          background: #e9ecef;
+          padding: 4px;
+          border-radius: 12px;
+        }
+
+        .delivery-type-btn {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 12px 16px;
+          border: none;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background: transparent;
+          color: #6c757d;
+        }
+
+        .delivery-type-btn.active {
+          background: #28a745;
+          color: white;
+          box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        }
+
+        .type-icon {
+          font-size: 14px;
+        }
+
+        .service-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+          margin-bottom: 28px;
+        }
+
+        .service-card {
+          position: relative;
+          background: white;
+          border: 2px solid #e0e0e0;
+          border-radius: 16px;
+          padding: 20px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          min-height: 120px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .service-card:hover:not(.disabled) {
+          transform: translateY(-4px);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card.selected {
+          border-color: #28a745;
+          background: linear-gradient(135deg, #e8f5e8 0%, #ffffff 100%);
+          box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+        }
+
+        .service-card.disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          background: #f8f9fa;
+        }
+
+        .service-icon {
+          position: relative;
+          margin-bottom: 12px;
+        }
+
+        .service-icon .icon {
+          font-size: 24px;
+          color: #28a745;
+        }
+
+        .service-icon .emoji {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          font-size: 20px;
+        }
+
+        .service-content {
+          flex-grow: 1;
+        }
+
+        .service-name {
+          margin: 0 0 6px 0;
+          font-size: 16px;
+          font-weight: bold;
+          color: #333;
+        }
+
+        .service-description {
+          margin: 0;
+          font-size: 12px;
+          color: #6c757d;
+          line-height: 1.4;
+        }
+
+        .coming-soon {
+          display: inline-block;
+          background: #ffc107;
+          color: #856404;
+          padding: 2px 8px;
+          border-radius: 12px;
+          font-size: 10px;
+          font-weight: bold;
+          margin-top: 6px;
+        }
+
+        .selected-indicator {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          width: 24px;
+          height: 24px;
+          background: #28a745;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .note-section {
+          margin-bottom: 24px;
+        }
+
+        .note-label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: 500;
+          color: #495057;
+          font-size: 14px;
+        }
+
+        .note-input {
+          width: 100%;
+          padding: 12px;
+          border: 2px solid #e0e0e0;
+          border-radius: 8px;
+          font-size: 14px;
+          font-family: inherit;
+          resize: vertical;
+          min-height: 80px;
+          transition: border-color 0.3s ease;
+        }
+
+        .note-input:focus {
+          border-color: #28a745;
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+        }
+
+        .note-counter {
+          text-align: right;
+          margin-top: 4px;
+          font-size: 12px;
+          color: #6c757d;
+        }
+
+        .banner {
+          background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+          color: white;
+          padding: 16px 20px;
+          border-radius: 12px;
+          text-align: center;
+          margin-bottom: 24px;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .banner-emoji {
+          font-size: 20px;
+          margin-right: 8px;
+        }
+
+        .banner-text {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .banner-badge {
+          position: absolute;
+          top: 8px;
+          right: 12px;
+          background: #ffc107;
+          color: #856404;
+          padding: 2px 8px;
+          border-radius: 8px;
+          font-size: 10px;
+          font-weight: bold;
+        }
+
+        .selection-reminder {
+          background: #fff3cd;
+          border: 1px solid #ffeeba;
+          color: #856404;
+          padding: 12px 16px;
+          border-radius: 8px;
+          text-align: center;
+          margin-bottom: 16px;
+          font-size: 14px;
+        }
+
+        .continue-btn {
+          width: 100%;
+          padding: 16px 24px;
+          background: #28a745;
+          color: white;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          transition: all 0.3s ease;
+          margin-bottom: 20px;
+        }
+
+        .continue-btn:hover:not(.disabled) {
+          background: #218838;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .continue-btn.disabled {
+          background: #6c757d;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+        }
+
+        .btn-icon {
+          font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+          .home-container {
+            padding: 15px;
+            padding-bottom: 140px;
+          }
+
+          .location-header {
+            padding: 12px 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+
+          .balance-info {
+            align-items: flex-start;
+          }
+
+          .service-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+
+          .service-card {
+            flex-direction: row;
+            text-align: left;
+            padding: 16px;
+          
+          }
+
+          .service-icon {
+            margin-right: 16px;
+            margin-bottom: 0;
+          }
+
+          .page-title {
+            font-size: 20px;
+          }
+        }

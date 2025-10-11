@@ -1,0 +1,385 @@
+ .tracking-container {
+          padding: 20px;
+          min-height: 100vh;
+          background: #f8f9fa;
+          padding-bottom: 120px;
+        }
+
+        .tracking-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+        }
+
+        .back-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: none;
+          border: none;
+          color: #28a745;
+          font-size: 16px;
+          cursor: pointer;
+          padding: 8px;
+        }
+
+        .back-btn:hover {
+          background: #e8f5e8;
+          border-radius: 4px;
+        }
+
+        .tracking-header h2 {
+          margin: 0;
+          color: #333;
+          font-size: 24px;
+        }
+
+        .loading-spinner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          font-size: 18px;
+          color: #28a745;
+        }
+
+        .tracking-card, .map-card {
+          background: white;
+          border-radius: 16px;
+          padding: 20px;
+          margin-bottom: 16px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          border: 1px solid #e0e0e0;
+        }
+
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          padding-bottom: 12px;
+          border-bottom: 2px solid #e8f5e8;
+        }
+
+        .card-header h3 {
+          margin: 0;
+          color: #28a745;
+          font-size: 18px;
+        }
+
+        .order-time {
+          color: #6c757d;
+          font-size: 14px;
+        }
+
+        .current-status {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 20px;
+          background: linear-gradient(135deg, #e8f5e8 0%, #f8f9fa 100%);
+          border-radius: 12px;
+          border: 2px solid #28a745;
+        }
+
+        .status-icon-container {
+          width: 50px;
+          height: 50px;
+          background: #28a745;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .status-icon {
+          color: white;
+          font-size: 20px;
+        }
+
+        .status-info h4 {
+          margin: 0 0 6px 0;
+          color: #28a745;
+          font-size: 18px;
+        }
+
+        .status-info p {
+          margin: 0 0 8px 0;
+          color: #495057;
+          font-size: 14px;
+        }
+
+        .eta {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          color: #17a2b8;
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .eta-icon {
+          font-size: 12px;
+        }
+
+        .map-card h4 {
+          margin: 0 0 16px 0;
+          color: #28a745;
+          font-size: 16px;
+        }
+
+        .map-container {
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .location-info {
+          position: relative;
+        }
+
+        .location-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          margin-bottom: 20px;
+        }
+
+        .location-item:last-child {
+          margin-bottom: 0;
+        }
+
+        .location-icon {
+          font-size: 16px;
+          margin-top: 4px;
+          flex-shrink: 0;
+        }
+
+        .location-icon.pickup {
+          color: #28a745;
+        }
+
+        .location-icon.dropoff {
+          color: #dc3545;
+        }
+
+        .location-label {
+          display: block;
+          font-weight: bold;
+          color: #495057;
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
+
+        .location-address {
+          margin: 0 0 6px 0;
+          color: #333;
+          font-size: 16px;
+        }
+
+        .location-extra {
+          display: inline-block;
+          background: #e8f5e8;
+          color: #155724;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+        }
+
+        .route-line {
+          position: absolute;
+          left: 8px;
+          top: 35px;
+          width: 2px;
+          height: 30px;
+          background: linear-gradient(to bottom, #28a745, #dc3545);
+          border-radius: 1px;
+        }
+
+        .progress-steps {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .progress-step {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 12px;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        }
+
+        .progress-step.active {
+          background: #e8f5e8;
+        }
+
+        .progress-step.current {
+          background: #d4edda;
+          border: 2px solid #28a745;
+        }
+
+        .step-indicator {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          background: #e9ecef;
+          color: #6c757d;
+        }
+
+        .progress-step.active .step-indicator {
+          background: #28a745;
+          color: white;
+        }
+
+        .step-icon {
+          font-size: 14px;
+        }
+
+        .step-content {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .step-label {
+          font-weight: 500;
+          color: #333;
+          margin-bottom: 2px;
+        }
+
+        .step-description {
+          font-size: 13px;
+          color: #6c757d;
+        }
+
+        .driver-card {
+          background: linear-gradient(135deg, #fff3cd 0%, #ffffff 100%);
+          border: 2px solid #ffeeba;
+        }
+
+        .driver-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .driver-name {
+          margin: 0 0 4px 0;
+          font-weight: bold;
+          color: #333;
+          font-size: 16px;
+        }
+
+        .driver-rating {
+          margin: 0;
+          color: #856404;
+          font-size: 14px;
+        }
+
+        .contact-driver-btn {
+          background: #28a745;
+          color: white;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 6px;
+          font-weight: 500;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .contact-driver-btn:hover {
+          background: #218838;
+        }
+
+        .summary-details {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .summary-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 6px 0;
+          border-bottom: 1px solid #e9ecef;
+        }
+
+        .summary-item:last-child {
+          border-bottom: none;
+        }
+
+        .tracking-actions {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-top: 16px;
+        }
+
+        .cancel-btn, .completed-btn {
+          padding: 14px 24px;
+          border: none;
+          border-radius: 8px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.3s ease;
+        }
+
+        .cancel-btn {
+          background: #dc3545;
+          color: white;
+        }
+
+        .cancel-btn:hover {
+          background: #c82333;
+        }
+
+        .completed-btn {
+          background: #28a745;
+          color: white;
+        }
+
+        .completed-btn:hover {
+          background: #218838;
+        }
+
+        .btn-icon {
+          font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+          .tracking-container {
+            padding: 15px;
+            padding-bottom: 140px;
+          }
+
+          .tracking-card, .map-card {
+            padding: 16px;
+          }
+
+          .current-status {
+            flex-direction: column;
+            text-align: center;
+            gap: 12px;
+          }
+
+          .driver-info {
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+          }
+        }

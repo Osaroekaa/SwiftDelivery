@@ -1,0 +1,392 @@
+ .review-container {
+          padding: 20px;
+          min-height: 100vh;
+          background: #f8f9fa;
+          padding-bottom: 120px;
+        }
+
+        .review-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+        }
+
+        .back-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: none;
+          border: none;
+          color: #28a745;
+          font-size: 16px;
+          cursor: pointer;
+          padding: 8px;
+        }
+
+        .back-btn:hover {
+          background: #e8f5e8;
+          border-radius: 4px;
+        }
+
+        .review-header h2 {
+          margin: 0;
+          color: #333;
+          font-size: 24px;
+        }
+
+        .loading-spinner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          font-size: 18px;
+          color: #28a745;
+        }
+
+        .review-card {
+          background: white;
+          border-radius: 16px;
+          padding: 24px;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          border: 1px solid #e0e0e0;
+        }
+
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          padding-bottom: 12px;
+          border-bottom: 2px solid #e8f5e8;
+        }
+
+        .card-header h3 {
+          margin: 0;
+          color: #28a745;
+          font-size: 18px;
+        }
+
+        .order-date {
+          color: #6c757d;
+          font-size: 14px;
+        }
+
+        .location-section {
+          margin-bottom: 20px;
+          padding: 16px;
+          background: #f8f9fa;
+          border-radius: 12px;
+          border-left: 4px solid #28a745;
+        }
+
+        .location-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 12px;
+        }
+
+        .location-header h4 {
+          margin: 0;
+          color: #28a745;
+          font-size: 16px;
+        }
+
+        .location-icon {
+          font-size: 16px;
+        }
+
+        .location-icon.pickup {
+          color: #28a745;
+        }
+
+        .location-icon.dropoff {
+          color: #dc3545;
+        }
+
+        .location-details {
+          margin-left: 26px;
+        }
+
+        .address {
+          margin: 0 0 6px 0;
+          font-weight: bold;
+          color: #333;
+        }
+
+        .street-info {
+          margin: 0 0 4px 0;
+          font-size: 14px;
+          color: #0c5460;
+          background: rgba(23, 162, 184, 0.1);
+          padding: 2px 8px;
+          border-radius: 4px;
+          display: inline-block;
+        }
+
+        .description {
+          margin: 4px 0;
+          font-size: 13px;
+          color: #6c757d;
+          font-style: italic;
+        }
+
+        .phone {
+          margin: 6px 0 0 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #495057;
+          font-size: 14px;
+          background: rgba(40, 167, 69, 0.05);
+          padding: 8px 12px;
+          border-radius: 6px;
+          border: 1px solid rgba(40, 167, 69, 0.2);
+        }
+
+        .phone-icon {
+          color: #28a745;
+          font-size: 12px;
+          flex-shrink: 0;
+        }
+
+        .phone-label {
+          font-weight: 500;
+          color: #28a745;
+          margin-right: 4px;
+        }
+
+        .phone-number {
+          font-weight: 600;
+          color: #333;
+        }
+
+        .note-section {
+          background: #fff3cd;
+          border: 1px solid #ffeeba;
+          padding: 16px;
+          border-radius: 8px;
+        }
+
+        .note-section h4 {
+          margin: 0 0 8px 0;
+          color: #856404;
+          font-size: 14px;
+        }
+
+        .note-text {
+          margin: 0;
+          color: #856404;
+        }
+
+        .cost-card {
+          background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+          border: 2px solid #e8f5e8;
+        }
+
+        .route-info {
+          display: flex;
+          justify-content: space-around;
+          background: #d1ecf1;
+          padding: 12px;
+          border-radius: 8px;
+          margin-bottom: 16px;
+        }
+
+        .route-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          color: #0c5460;
+          font-size: 14px;
+        }
+
+        .route-icon {
+          color: #17a2b8;
+        }
+
+        .cost-breakdown {
+          margin-bottom: 16px;
+        }
+
+        .cost-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 0;
+        }
+
+        .cost-item.total {
+          border-top: 2px solid #28a745;
+          padding-top: 12px;
+          margin-top: 8px;
+        }
+
+        .cost-value {
+          font-weight: bold;
+          color: #28a745;
+        }
+
+        .total-amount {
+          font-size: 18px;
+        }
+
+        .balance-info {
+          background: #e8f5e8;
+          padding: 16px;
+          border-radius: 8px;
+          border: 1px solid #c3e6cb;
+        }
+
+        .balance-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 8px;
+        }
+
+        .balance-item:last-child {
+          margin-bottom: 0;
+        }
+
+        .balance-icon {
+          color: #28a745;
+          font-size: 16px;
+        }
+
+        .balance-details {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+
+        .balance-label {
+          color: #495057;
+          font-size: 14px;
+        }
+
+        .balance-amount {
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .balance-amount.positive {
+          color: #28a745;
+        }
+
+        .balance-amount.negative {
+          color: #dc3545;
+        }
+
+        .insufficient-warning {
+          background: #f8d7da;
+          color: #721c24;
+          padding: 12px;
+          border-radius: 8px;
+          border: 1px solid #f1b0b7;
+          margin-top: 12px;
+          text-align: center;
+          font-weight: 500;
+        }
+
+        .review-actions {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-top: 20px;
+        }
+
+        .confirm-btn, .cancel-btn {
+          padding: 16px 24px;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          transition: all 0.3s ease;
+        }
+
+        .confirm-btn {
+          background: #28a745;
+          color: white;
+        }
+
+        .confirm-btn:hover:not(:disabled) {
+          background: #218838;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        .confirm-btn:disabled {
+          background: #6c757d;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+        }
+
+        .cancel-btn {
+          background: #6c757d;
+          color: white;
+        }
+
+        .cancel-btn:hover:not(:disabled) {
+          background: #545b62;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+        }
+
+        .cancel-btn:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        .btn-icon {
+          font-size: 16px;
+        }
+
+        .spinner {
+          width: 16px;
+          height: 16px;
+          border: 2px solid #ffffff40;
+          border-top: 2px solid #ffffff;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+          .review-container {
+            padding: 15px;
+            padding-bottom: 140px;
+          }
+
+          .review-card {
+            padding: 20px;
+          }
+
+          .location-details {
+            margin-left: 0;
+          }
+
+          .route-info {
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .balance-details {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+          }
+        }

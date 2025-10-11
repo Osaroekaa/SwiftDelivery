@@ -1,0 +1,5 @@
+- [x] Update SignUpPage.jsx to save userProfile JSON object with name, email, and joinDate on signup
+- [x] Update LoginPage.jsx to save userProfile JSON object with email as name and email on login
+- [ ] Test the changes: signup, login, check profile loads details
+- [ ] Commit changes to git
+- [ ] Push to GitHub

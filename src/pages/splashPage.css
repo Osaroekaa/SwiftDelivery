@@ -1,0 +1,31 @@
+.splash-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e7d32; /* green */
+  color: white;
+  text-align: center;
+}
+
+.splash-logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.splash-tagline {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #e8f5e9; /* light green */
+}
+.splash-spinner {
+  margin-top: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
