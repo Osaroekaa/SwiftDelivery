@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt, FaCrosshairs } from "react-icons/fa";
 import axios from "axios";
 import BottomNav from "../component/BottomNav.jsx";
-import "./pickupPage.css";
+import "./PickupPage.css";
 import React from "react";
 
 export default function PickupPage() {
