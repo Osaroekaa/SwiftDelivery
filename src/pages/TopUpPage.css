@@ -1,0 +1,342 @@
+
+.topup-container {
+          padding: 20px;
+          min-height: 100vh;
+          background: #f8f9fa;
+          padding-bottom: 120px;
+        }
+
+        .topup-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+        }
+
+        .back-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: none;
+          border: none;
+          color: #28a745;
+          font-size: 16px;
+          cursor: pointer;
+          padding: 8px;
+        }
+
+        .back-btn:hover {
+          background: #e8f5e8;
+          border-radius: 4px;
+        }
+
+        .topup-header h2 {
+          margin: 0;
+          color: #333;
+          font-size: 24px;
+        }
+
+        .loading-spinner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          font-size: 18px;
+          color: #28a745;
+        }
+
+        .balance-card, .topup-card {
+          background: white;
+          border-radius: 16px;
+          padding: 24px;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          border: 1px solid #e0e0e0;
+        }
+
+        .balance-header {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 20px;
+          padding-bottom: 12px;
+          border-bottom: 2px solid #e8f5e8;
+        }
+
+        .wallet-icon {
+          font-size: 20px;
+          color: #28a745;
+        }
+
+        .balance-header h3 {
+          margin: 0;
+          color: #28a745;
+          font-size: 18px;
+        }
+
+        .balance-details {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .balance-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px;
+          background: #f8f9fa;
+          border-radius: 8px;
+        }
+
+        .balance-item.shortfall {
+          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+          border: 2px solid #e0e0e0;
+        }
+
+        .label {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          color: #495057;
+          font-weight: 500;
+        }
+
+        .amount {
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .amount.current {
+          color: #17a2b8;
+        }
+
+        .amount.required {
+          color: #6c757d;
+        }
+
+        .amount.deficit {
+          color: #dc3545;
+        }
+
+        .amount.surplus {
+          color: #28a745;
+        }
+
+        .status-icon {
+          font-size: 14px;
+        }
+
+        .status-icon.insufficient {
+          color: #dc3545;
+        }
+
+        .status-icon.sufficient {
+          color: #28a745;
+        }
+
+        .shortfall-notice {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: #f8d7da;
+          color: #721c24;
+          padding: 12px;
+          border-radius: 8px;
+          border: 1px solid #f1b0b7;
+          margin-top: 15px;
+        }
+
+        .notice-icon {
+          color: #dc3545;
+          flex-shrink: 0;
+        }
+
+        .shortfall-notice p {
+          margin: 0;
+          font-size: 14px;
+        }
+
+        .topup-card h3 {
+          margin: 0 0 20px 0;
+          color: #28a745;
+          font-size: 18px;
+          border-bottom: 2px solid #e8f5e8;
+          padding-bottom: 10px;
+        }
+
+        .amount-input-section {
+          margin-bottom: 25px;
+        }
+
+        .amount-input-section label {
+          display: block;
+          color: #495057;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+
+        .input-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+        }
+
+        .currency-symbol {
+          position: absolute;
+          left: 12px;
+          color: #28a745;
+          font-weight: bold;
+          font-size: 18px;
+          z-index: 1;
+        }
+
+        .topup-input {
+          width: 100%;
+          padding: 15px 15px 15px 35px;
+          border: 2px solid #e0e0e0;
+          border-radius: 8px;
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .topup-input:focus {
+          border-color: #28a745;
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+        }
+
+        .input-hint, .amount-status {
+          margin: 6px 0 0 0;
+          color: #6c757d;
+          font-size: 13px;
+        }
+
+        .amount-status {
+          font-weight: 500;
+        }
+
+        .quick-amounts h4 {
+          margin: 0 0 12px 0;
+          color: #495057;
+          font-size: 14px;
+        }
+
+        .quick-buttons {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          margin-bottom: 25px;
+        }
+
+        .quick-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 12px 16px;
+          border: 2px solid #28a745;
+          background: white;
+          color: #28a745;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        .quick-btn:hover {
+          background: #e8f5e8;
+          transform: translateY(-2px);
+        }
+
+        .quick-btn.selected {
+          background: #28a745;
+          color: white;
+        }
+
+        .plus-icon {
+          font-size: 12px;
+        }
+
+        .add-funds-btn {
+          width: 100%;
+          padding: 16px 24px;
+          background: #28a745;
+          color: white;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          transition: all 0.3s ease;
+          margin-bottom: 15px;
+        }
+
+        .add-funds-btn:hover:not(:disabled) {
+          background: #218838;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        .add-funds-btn:disabled {
+          background: #6c757d;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+        }
+
+        .btn-icon {
+          font-size: 16px;
+        }
+
+        .balance-preview {
+          background: #d4edda;
+          border: 1px solid #c3e6cb;
+          border-radius: 8px;
+          padding: 12px;
+          text-align: center;
+        }
+
+        .balance-preview p {
+          margin: 0 0 6px 0;
+          color: #155724;
+        }
+
+        .success-message {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          color: #155724 !important;
+          font-weight: 500;
+        }
+
+        .success-icon {
+          color: #28a745;
+        }
+
+        @media (max-width: 768px) {
+          .topup-container {
+            padding: 15px;
+            padding-bottom: 140px;
+          }
+
+          .balance-card, .topup-card {
+            padding: 20px;
+          }
+
+          .quick-buttons {
+            grid-template-columns: 1fr;
+            gap: 8px;
+          }
+
+          .balance-item {
+            flex-direction: column;
+            text-align: center;
+            gap: 4px;
+          }
+        }

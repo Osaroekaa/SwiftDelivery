@@ -1,0 +1,297 @@
+.payment-container {
+          padding: 20px;
+          min-height: 100vh;
+          background: #f8f9fa;
+          padding-bottom: 100px;
+        }
+
+        .payment-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+        }
+
+        .back-btn {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          background: none;
+          border: none;
+          color: #28a745;
+          font-size: 16px;
+          cursor: pointer;
+          padding: 8px;
+        }
+
+        .back-btn:hover {
+          background: #e8f5e8;
+          border-radius: 4px;
+        }
+
+        .payment-header h2 {
+          margin: 0;
+          color: #333;
+          font-size: 24px;
+        }
+
+        .loading-spinner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          font-size: 18px;
+          color: #28a745;
+        }
+
+        .payment-card {
+          background: white;
+          border-radius: 16px;
+          padding: 24px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+          border: 1px solid #e0e0e0;
+        }
+
+        .order-summary h3 {
+          margin: 0 0 20px 0;
+          color: #28a745;
+          font-size: 18px;
+          border-bottom: 2px solid #e8f5e8;
+          padding-bottom: 10px;
+        }
+
+        .location-details {
+          margin-bottom: 20px;
+        }
+
+        .location-item {
+          margin-bottom: 15px;
+          padding: 12px;
+          background: #f8f9fa;
+          border-radius: 8px;
+          border-left: 4px solid #28a745;
+        }
+
+        .location-item strong {
+          color: #28a745;
+          display: block;
+          margin-bottom: 4px;
+        }
+
+        .location-item p {
+          margin: 0;
+          color: #333;
+          font-weight: 500;
+        }
+
+        .location-extra {
+          display: inline-block;
+          background: #e8f5e8;
+          color: #155724;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 13px;
+          margin-top: 4px;
+        }
+
+        .order-datetime {
+          display: flex;
+          justify-content: space-between;
+          background: #fff3cd;
+          padding: 12px;
+          border-radius: 8px;
+          margin-bottom: 15px;
+        }
+
+        .order-datetime p {
+          margin: 0;
+          color: #856404;
+        }
+
+        .route-info {
+          display: flex;
+          justify-content: space-between;
+          background: #d1ecf1;
+          padding: 12px;
+          border-radius: 8px;
+          margin-bottom: 15px;
+        }
+
+        .route-info p {
+          margin: 0;
+          color: #0c5460;
+        }
+
+        .pricing-section {
+          border-top: 2px solid #e8f5e8;
+          padding-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        .price-breakdown {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .price-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 0;
+        }
+
+        .price-item.total {
+          border-top: 2px solid #28a745;
+          padding-top: 12px;
+          margin-top: 8px;
+        }
+
+        .price-amount {
+          font-weight: bold;
+          color: #28a745;
+        }
+
+        .total-price {
+          font-size: 18px;
+          color: #28a745;
+        }
+
+        .balance-section {
+          border-top: 2px solid #e8f5e8;
+          padding-top: 20px;
+        }
+
+        .balance-info {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 15px;
+        }
+
+        .balance-icon {
+          font-size: 24px;
+          color: #17a2b8;
+        }
+
+        .balance-details {
+          flex-grow: 1;
+        }
+
+        .balance-label {
+          margin: 0 0 4px 0;
+          color: #6c757d;
+          font-size: 14px;
+        }
+
+        .balance-amount {
+          margin: 0;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .balance-amount.sufficient {
+          color: #28a745;
+        }
+
+        .balance-amount.insufficient {
+          color: #dc3545;
+        }
+
+        .balance-status {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px;
+          border-radius: 8px;
+          font-size: 14px;
+        }
+
+        .balance-status.sufficient {
+          background: #d4edda;
+          color: #155724;
+          border: 1px solid #c3e6cb;
+        }
+
+        .balance-status.insufficient {
+          background: #f8d7da;
+          color: #721c24;
+          border: 1px solid #f1b0b7;
+        }
+
+        .status-icon {
+          flex-shrink: 0;
+        }
+
+        .action-buttons {
+          margin-top: 20px;
+          text-align: center;
+        }
+
+        .continue-btn, .topup-btn {
+          width: 100%;
+          padding: 16px 24px;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          transition: all 0.3s ease;
+        }
+
+        .continue-btn {
+          background: #28a745;
+          color: white;
+        }
+
+        .continue-btn:hover {
+          background: #218838;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        }
+
+        .topup-btn {
+          background: #17a2b8;
+          color: white;
+        }
+
+        .topup-btn:hover {
+          background: #138496;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+        }
+
+        .btn-icon {
+          font-size: 18px;
+        }
+
+        .topup-info {
+          margin-top: 12px;
+          color: #6c757d;
+          font-size: 14px;
+          font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+          .payment-container {
+            padding: 15px;
+          }
+
+          .payment-card {
+            padding: 20px;
+          }
+
+          .order-datetime, .route-info {
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .price-item {
+            flex-wrap: wrap;
+          }
+        }
