@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./splashpage.css";
+import "./SplashPage.css";
 
 export default function SplashPage() {
   const navigate = useNavigate();
