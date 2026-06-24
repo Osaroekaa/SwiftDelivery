@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./SignupPage.css";
+import "./SignUpPage.css";
 
-export default function SignupPage() {
+export default function SignUpPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,6 @@ export default function SignupPage() {
     e.preventDefault();
 
     if (name && email && password) {
-      // Save user profile to localStorage
       const userProfile = {
         name: name,
         email: email,
@@ -22,7 +21,7 @@ export default function SignupPage() {
       };
       localStorage.setItem("userProfile", JSON.stringify(userProfile));
       localStorage.setItem("authToken", "sample_token");
-      navigate("/home"); // Go to home after signup
+      navigate("/home");
     } else {
       alert("Please fill in all fields");
     }
