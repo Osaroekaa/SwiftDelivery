@@ -1,5 +1,8 @@
-import { useState } from 'react';
-import Layout from '../component/Layout';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt, FaCrosshairs, FaCheck } from 'react-icons/fa';
+import axios from 'axios';
+import BottomNav from '../component/BottomNav.jsx';
 import './DropoffPage.css';
 
 export default function DropoffPage() {
