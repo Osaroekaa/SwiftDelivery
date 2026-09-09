@@ -242,12 +242,12 @@ export default function DropoffPage() {
         const duration = response.data.routes[0].summary.duration; // in seconds
         const distance = response.data.routes[0].summary.distance; // in meters
 
-        // Price calculation: ₦500 per hour
+        // Price calculation: ₦1,500 per hour
         const hours = duration / 3600;
-        const calculatedPrice = Math.ceil(hours * 500);
+        const calculatedPrice = Math.ceil(hours * 1500);
 
-        // Minimum price of ₦200
-        finalPrice = Math.max(calculatedPrice, 200);
+        // Minimum price of ₦500
+        finalPrice = Math.max(calculatedPrice, 500);
 
         // Save route info
         routeInfo = {
@@ -271,10 +271,10 @@ export default function DropoffPage() {
 
         // Estimate driving time: assume 30 km/h average speed in city traffic
         const estimatedHours = (distanceKm * 1.4) / 30; // 1.4 factor for actual road distance vs straight line
-        const calculatedPrice = Math.ceil(estimatedHours * 500);
+        const calculatedPrice = Math.ceil(estimatedHours * 1500);
 
-        // Minimum price of ₦200
-        finalPrice = Math.max(calculatedPrice, 200);
+        // Minimum price of ₦500
+        finalPrice = Math.max(calculatedPrice, 500);
 
         // Save route info
         routeInfo = {
@@ -304,9 +304,9 @@ export default function DropoffPage() {
           dropoffCoordinates[0], dropoffCoordinates[1]
         );
 
-        // Simple pricing: ₦500 per hour + ₦200 minimum
+        // Simple pricing: ₦1,500 per hour + ₦500 minimum
         const estimatedHoursSimple = (distanceKm * 2) / 60; // 2 minutes per km
-        const simplePrice = Math.max(200, Math.ceil(estimatedHoursSimple * 500));
+        const simplePrice = Math.max(500, Math.ceil(estimatedHoursSimple * 1500));
         
         setEstimatedPrice(simplePrice);
         localStorage.setItem("estimatedPrice", JSON.stringify(simplePrice));
