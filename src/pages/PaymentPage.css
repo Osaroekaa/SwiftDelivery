@@ -2,7 +2,8 @@
           padding: 20px;
           min-height: 100vh;
           background: #f8f9fa;
-          padding-bottom: 100px;
+          padding-bottom: calc(140px + env(safe-area-inset-bottom));
+          box-sizing: border-box;
         }
 
         .payment-header {
@@ -227,6 +228,7 @@
         .action-buttons {
           margin-top: 20px;
           text-align: center;
+          padding-bottom: calc(8px + env(safe-area-inset-bottom));
         }
 
         .continue-btn, .topup-btn {
@@ -258,6 +260,10 @@
         .topup-btn {
           background: #17a2b8;
           color: white;
+          margin-top: 12px;
+          margin-bottom: 8px;
+          position: relative;
+          z-index: 1;
         }
 
         .topup-btn:hover {
@@ -280,6 +286,7 @@
         @media (max-width: 768px) {
           .payment-container {
             padding: 15px;
+            padding-bottom: calc(150px + env(safe-area-inset-bottom));
           }
 
           .payment-card {

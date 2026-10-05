@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt, FaCrosshairs, FaCheck } from 'react-icons/fa';
 import axios from 'axios';
 import BottomNav from '../component/BottomNav.jsx';
+import { calculateDeliveryPrice } from '../utils/deliveryPricing.js';
 import './DropoffPage.css';
 
 export default function DropoffPage() {
@@ -242,19 +243,20 @@ export default function DropoffPage() {
         const duration = response.data.routes[0].summary.duration; // in seconds
         const distance = response.data.routes[0].summary.distance; // in meters
 
-        // Price calculation: ₦1,500 per hour
-        const hours = duration / 3600;
-        const calculatedPrice = Math.ceil(hours * 1500);
-
-        // Minimum price of ₦500
-        finalPrice = Math.max(calculatedPrice, 500);
+        // Standard delivery pricing for all regions within Nigeria.
+        const distanceKm = distance / 1000;
+        const minutes = duration / 60;
+        finalPrice = calculateDeliveryPrice({
+          distanceKm,
+          durationMinutes: minutes,
+        });
 
         // Save route info
         routeInfo = {
           duration: duration,
           distance: distance,
           durationText: `${Math.round(duration / 60)} minutes`,
-          distanceText: `${(distance / 1000).toFixed(1)} km`,
+          distanceText: `${(distance / 100).toFixed(1)} km`,
           method: 'api'
         };
 
@@ -263,23 +265,21 @@ export default function DropoffPage() {
       } catch (apiError) {
         console.warn("API calculation failed, using fallback method:", apiError.message);
         
-        // Fallback: Calculate based on straight-line distance
+        // Fallback: standard nationwide pricing based on estimated travel distance.
         const distanceKm = calculateDistance(
           pickupData.coords[0], pickupData.coords[1],
           dropoffCoordinates[0], dropoffCoordinates[1]
         );
-
-        // Estimate driving time: assume 30 km/h average speed in city traffic
-        const estimatedHours = (distanceKm * 1.4) / 30; // 1.4 factor for actual road distance vs straight line
-        const calculatedPrice = Math.ceil(estimatedHours * 1500);
-
-        // Minimum price of ₦500
-        finalPrice = Math.max(calculatedPrice, 500);
+        const estimatedHours = Math.max(0.75, distanceKm / 18 + 0.5);
+        finalPrice = calculateDeliveryPrice({
+          distanceKm,
+          durationMinutes: estimatedHours * 60,
+        });
 
         // Save route info
         routeInfo = {
           duration: estimatedHours * 3600,
-          distance: distanceKm * 1400, // estimated road distance in meters
+          distance: distanceKm * 1400,
           durationText: `~${Math.round(estimatedHours * 60)} minutes`,
           distanceText: `~${distanceKm.toFixed(1)} km`,
           method: 'fallback'
@@ -304,10 +304,12 @@ export default function DropoffPage() {
           dropoffCoordinates[0], dropoffCoordinates[1]
         );
 
-        // Simple pricing: ₦1,500 per hour + ₦500 minimum
-        const estimatedHoursSimple = (distanceKm * 2) / 60; // 2 minutes per km
-        const simplePrice = Math.max(500, Math.ceil(estimatedHoursSimple * 1500));
-        
+        // Simple nationwide pricing: consistent base fare for all locations.
+        const simplePrice = calculateDeliveryPrice({
+          distanceKm,
+          durationMinutes: Math.max(20, distanceKm * 2),
+        });
+
         setEstimatedPrice(simplePrice);
         localStorage.setItem("estimatedPrice", JSON.stringify(simplePrice));
         
@@ -371,7 +373,7 @@ export default function DropoffPage() {
   return (
     <div className="dropoff-container">
       {/* Header */}
-      <h2>📍 Select Drop-off Location</h2>
+      <h2>Select Drop-off Location</h2>
       
       <div className="dropoff-header">
         <button className="back-btn" onClick={() => navigate(-1)}>
@@ -383,7 +385,7 @@ export default function DropoffPage() {
       {/* Pickup Location Display */}
       {pickupData && (
         <div className="pickup-info">
-          <h4>📦 Pickup Location:</h4>
+          <h4>Pickup Location:</h4>
           <div className="pickup-details">
             <span className="pickup-address">{pickupData.address}</span>
             {pickupData.streetNumber && <span className="pickup-street">{pickupData.streetNumber}</span>}

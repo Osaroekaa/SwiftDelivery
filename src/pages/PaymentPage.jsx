@@ -126,11 +126,11 @@ export default function PaymentPage() {
       <div className="payment-card">
         {/* Order Summary */}
         <div className="order-summary">
-          <h3>📦 Order Summary</h3>
+          <h3>Order Summary</h3>
           
           <div className="location-details">
             <div className="location-item">
-              <strong>📍 Pickup:</strong>
+              <strong> Pickup:</strong>
               <p>{pickupData?.address}</p>
               {pickupData?.streetNumber && (
                 <span className="location-extra">{pickupData.streetNumber}</span>
@@ -138,7 +138,7 @@ export default function PaymentPage() {
             </div>
             
             <div className="location-item">
-              <strong>📍 Drop-off:</strong>
+              <strong> Drop-off:</strong>
               <p>{dropoffData?.address}</p>
               {dropoffData?.streetNumber && (
                 <span className="location-extra">{dropoffData.streetNumber}</span>

@@ -1,6 +1,6 @@
 .onboarding-container {
           min-height: 100vh;
-          background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+          background: linear-gradient(135deg, #f5f7f4 0%, #ecf8f0 100%);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -52,7 +52,7 @@
           left: 0;
           right: 0;
           height: 4px;
-          background: linear-gradient(90deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
+          background: linear-gradient(90deg, #1fae5b 0%, #168f49 100%);
         }
 
         .slide-content {
@@ -76,11 +76,11 @@
         }
 
         .slide-text-card {
-          background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+          background: linear-gradient(135deg, #edf9f1 0%, #dff3e6 100%);
           border-radius: 16px;
           padding: 24px 20px;
-          box-shadow: 0 8px 25px rgba(40, 167, 69, 0.15);
-          border: 1px solid rgba(40, 167, 69, 0.2);
+          box-shadow: 0 8px 25px rgba(31, 174, 91, 0.15);
+          border: 1px solid rgba(31, 174, 91, 0.2);
           margin-bottom: 20px;
           animation: fadeInUp 0.6s ease-out 0.2s both;
           position: relative;
@@ -94,7 +94,7 @@
           left: 0;
           right: 0;
           height: 3px;
-          background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+          background: linear-gradient(90deg, #1fae5b 0%, #168f49 100%);
         }
 
         .slide-title {
@@ -151,9 +151,9 @@
         }
 
         .back-btn:hover:not(:disabled) {
-          background: #e8f5e8;
-          color: #28a745;
-          border-color: #28a745;
+          background: #eaf7ee;
+          color: #168f49;
+          border-color: #168f49;
         }
 
         .back-btn:disabled {
@@ -162,14 +162,14 @@
         }
 
         .next-btn {
-          background: #28a745;
+          background: #1fae5b;
           color: white;
-          box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+          box-shadow: 0 4px 15px rgba(31, 174, 91, 0.3);
         }
 
         .next-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+          box-shadow: 0 6px 20px rgba(31, 174, 91, 0.4);
         }
 
         .btn-icon {

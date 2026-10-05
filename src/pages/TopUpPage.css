@@ -3,7 +3,8 @@
           padding: 20px;
           min-height: 100vh;
           background: #f8f9fa;
-          padding-bottom: 120px;
+          padding-bottom: calc(120px + env(safe-area-inset-bottom));
+          box-sizing: border-box;
         }
 
         .topup-header {
@@ -273,7 +274,9 @@
           justify-content: center;
           gap: 10px;
           transition: all 0.3s ease;
-          margin-bottom: 15px;
+          margin-bottom: 18px;
+          position: relative;
+          z-index: 1;
         }
 
         .add-funds-btn:hover:not(:disabled) {
@@ -322,7 +325,7 @@
         @media (max-width: 768px) {
           .topup-container {
             padding: 15px;
-            padding-bottom: 140px;
+            padding-bottom: calc(150px + env(safe-area-inset-bottom));
           }
 
           .balance-card, .topup-card {
