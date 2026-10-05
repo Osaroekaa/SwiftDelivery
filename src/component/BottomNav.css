@@ -23,7 +23,7 @@
 }
 
 .bottom-nav a.active {
-  color: #2e7d32; /* Dark green for active */
+  color: var(--brand-dark, #168f49);
   font-weight: bold;
 }
 
@@ -31,5 +31,5 @@
   margin-bottom: 4px;
 }
 .bottom-nav a:hover {
-  color: #2e7d32; /* Dark green on hover */
+  color: var(--brand-dark, #168f49);
 }

@@ -31,32 +31,28 @@ export default function HomePage() {
     { 
       id: "food", 
       name: "Food", 
-      icon: FaUtensils, 
-      emoji: "🍔", 
+      image: "/card-images/food.jpg",
       description: "Restaurant deliveries, groceries",
       available: true 
     },
     { 
       id: "parcel", 
       name: "Parcel", 
-      icon: FaBox, 
-      emoji: "📦", 
+      image: "/card-images/parcel.jpg",
       description: "Documents, packages, gifts",
       available: true 
     },
     { 
       id: "furniture", 
       name: "Furniture", 
-      icon: FaCouch, 
-      emoji: "🛋", 
+      image: "/card-images/furniture.jpg",
       description: "Home appliances, furniture",
       available: true 
     },
     { 
       id: "relocation", 
       name: "Relocation", 
-      icon: FaTruck, 
-      emoji: "🚚", 
+      image: "/card-images/relocation.jpg",
       description: "Moving services, bulk items",
       available: false 
     }
@@ -386,7 +382,6 @@ export default function HomePage() {
       {/* Service Categories */}
       <div className="service-grid">
         {services.map((service) => {
-          const IconComponent = service.icon;
           return (
             <div
               key={service.id}
@@ -395,16 +390,15 @@ export default function HomePage() {
               } ${!service.available ? "disabled" : ""}`}
               onClick={() => handleServiceSelect(service.id)}
             >
-              <div className="service-icon">
-                <IconComponent className="icon" />
-                <span className="emoji">{service.emoji}</span>
-              </div>
-              <div className="service-content">
-                <h3 className="service-name">{service.name}</h3>
-                <p className="service-description">{service.description}</p>
-                {!service.available && (
-                  <span className="coming-soon">Coming Soon</span>
-                )}
+              <div className="service-image-wrap">
+                <img className="service-image" src={service.image} alt="" />
+                <div className="image-overlay">
+                  <div className="service-title-row">
+                    <h3 className="service-name">{service.name}</h3>
+                    <span className="service-price"></span>
+                  </div>
+                  <p className="service-description on-image">{service.description}</p>
+                </div>
               </div>
               {selectedService === service.id && service.available && (
                 <div className="selected-indicator">✓</div>

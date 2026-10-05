@@ -1,5 +1,17 @@
 
 
+:root {
+  --brand: #1fae5b;
+  --brand-dark: #168f49;
+  --brand-soft: #eaf7ee;
+  --bg: #f5f7f4;
+  --surface: #ffffff;
+  --surface-2: #f1f4f1;
+  --ink: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
 /* Universal Reset */
 *,
 *::before,
@@ -13,8 +25,8 @@
 /* Body base style */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f9fdf9;
-  color: #222;
+  background: #f5f7f4;
+  color: #111827;
 }
 
 /* HTML and Body Base Styles */
